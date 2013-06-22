@@ -27,7 +27,7 @@ You can contribute to the source code in our [GitHub](https://github.com/claudio
 * Activate the plugin;
 * Navigate to Settings -> Author Bio Box and fill the options.
 
-== Add the box directly ==
+= Add the box directly =
 
 Use this function:
 
