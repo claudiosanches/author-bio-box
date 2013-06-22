@@ -1,0 +1,185 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Author Bio Box v2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-06-22 01:01:50+0000\n"
+"Last-Translator: Claudio Sanches <contato@claudiosmweb.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: author-bio-box-admin.php:48
+#: author-bio-box-admin.php:97
+#@ authorbiobox
+msgid "Settings"
+msgstr "Configurações"
+
+#: author-bio-box-admin.php:64
+#@ authorbiobox
+msgid "Facebook"
+msgstr "Facebook"
+
+#: author-bio-box-admin.php:65
+#@ authorbiobox
+msgid "Twitter"
+msgstr "Twitter"
+
+#: author-bio-box-admin.php:66
+#@ authorbiobox
+msgid "Google Plus"
+msgstr "Google Plus"
+
+#: author-bio-box-admin.php:67
+#@ authorbiobox
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: author-bio-box-admin.php:102
+#@ authorbiobox
+msgid "Display in"
+msgstr "Exibir em"
+
+#: author-bio-box-admin.php:105
+#, php-format
+#@ authorbiobox
+msgid "You can display the box directly into your theme using: %s"
+msgstr "Você pode exibir o box diretamente em seu tema usando: %s"
+
+#: author-bio-box-admin.php:109
+#@ authorbiobox
+msgid "Only in Posts"
+msgstr "Apenas em Posts"
+
+#: author-bio-box-admin.php:110
+#@ authorbiobox
+msgid "Homepage and Posts"
+msgstr "Homepage e Posts"
+
+#: author-bio-box-admin.php:111
+#: author-bio-box-admin.php:163
+#@ authorbiobox
+msgid "None"
+msgstr "Nenhum"
+
+#: author-bio-box-admin.php:115
+#@ authorbiobox
+msgid "Design"
+msgstr "Aparência"
+
+#: author-bio-box-admin.php:120
+#@ authorbiobox
+msgid "Gravatar size"
+msgstr "Tamanho do Gravatar"
+
+#: author-bio-box-admin.php:123
+#, php-format
+#@ authorbiobox
+msgid "Set the Gravatar size (only integers). To configure the profile picture of the author you need to register in %s."
+msgstr "Configure o tamanho do Gravatar (aceita apenas números inteiros). Para configurar a imagem do perfil do autor é necessário fazer cadastro em %s."
+
+#: author-bio-box-admin.php:128
+#@ authorbiobox
+msgid "Background color"
+msgstr "Cor de fundo"
+
+#: author-bio-box-admin.php:135
+#@ authorbiobox
+msgid "Text color"
+msgstr "Cor do texto"
+
+#: author-bio-box-admin.php:142
+#@ authorbiobox
+msgid "Title color"
+msgstr "Cor do título"
+
+#: author-bio-box-admin.php:149
+#@ authorbiobox
+msgid "Border size"
+msgstr "Cor da borda"
+
+#: author-bio-box-admin.php:153
+#@ authorbiobox
+msgid "Thickness of the top and bottom edge of the box (only integers)."
+msgstr "Configura a largura da borda no topo e rodapé do box (aceita apenas números inteiros)."
+
+#: author-bio-box-admin.php:157
+#@ authorbiobox
+msgid "Border style"
+msgstr "Estilo da borda"
+
+#: author-bio-box-admin.php:164
+#@ authorbiobox
+msgid "Solid"
+msgstr "Sólida"
+
+#: author-bio-box-admin.php:165
+#@ authorbiobox
+msgid "Dotted"
+msgstr "Pontilhada"
+
+#: author-bio-box-admin.php:166
+#@ authorbiobox
+msgid "Dashed"
+msgstr "Tracejada"
+
+#: author-bio-box-admin.php:170
+#@ authorbiobox
+msgid "Border color"
+msgstr "Cor da borda"
+
+#. translators: plugin header field 'Name'
+#: author-bio-box-admin.php:263
+#: author-bio-box-admin.php:264
+#: author-bio-box-admin.php:288
+#: author-bio-box.php:0
+#@ authorbiobox
+msgid "Author Bio Box"
+msgstr "Author Bio Box"
+
+#. translators: plugin header field 'PluginURI'
+#: author-bio-box.php:0
+#@ authorbiobox
+msgid "https://github.com/claudiosmweb/author-bio-box"
+msgstr "https://github.com/claudiosmweb/author-bio-box"
+
+#. translators: plugin header field 'Description'
+#: author-bio-box.php:0
+#@ authorbiobox
+msgid "Display a box with the author's biography and also social icons in bottom of the post."
+msgstr "Exibe uma caixa com a biografia do autor e também ícones sociais no final do post."
+
+#. translators: plugin header field 'Author'
+#: author-bio-box.php:0
+#@ authorbiobox
+msgid "claudiosanches"
+msgstr "claudiosanches"
+
+#. translators: plugin header field 'AuthorURI'
+#: author-bio-box.php:0
+#@ authorbiobox
+msgid "http://claudiosmweb.com/"
+msgstr "http://claudiosmweb.com/"
+
+#. translators: plugin header field 'Version'
+#: author-bio-box.php:0
+#@ authorbiobox
+msgid "2.0.0"
+msgstr "2.0.0"
+
+#: author-bio-box.php:115
+#@ authorbiobox
+msgid "All posts by"
+msgstr "Todos os posts por"
+
