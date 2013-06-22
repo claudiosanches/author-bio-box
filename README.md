@@ -19,7 +19,6 @@ You can contribute to the source code in our [GitHub](https://github.com/claudio
 
 ### Credits ###
 
-* Icons by [Neil Hainsworth](https://github.com/neilorangepeel/Free-Social-Icons).
 * Initial idea by [Gustavo Freitas](http://gfsolucoes.net/).
 
 ## Installation ##
