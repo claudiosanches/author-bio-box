@@ -25,7 +25,8 @@ You can contribute to the source code in our [GitHub](https://github.com/claudio
 
 * Upload plugin files to your plugins folder, or install using WordPress built-in Add New Plugin installer;
 * Activate the plugin;
-* Navigate to Settings -> Author Bio Box and fill the options.
+* Navigate to Settings -> Author Bio Box and fill the options;
+* Fill the **Biographical Info** and **Contact Info** in Users -> Your Profile.
 
 = Add the box directly =
 
@@ -42,7 +43,8 @@ Use this function:
 == Screenshots ==
 
 1. Settings page.
-2. Plugin in action.
+2. New fields in "Your Profile" page.
+3. Plugin in action.
 
 == Changelog ==
 
