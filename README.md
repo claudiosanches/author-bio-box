@@ -15,7 +15,7 @@ Display a box with the author's biography and also social icons in bottom of the
 
 ### Contribute ###
 
-You can contribute to the source code in our [GitHub](https://github.com/claudiosmweb/social-count-plus) page.
+You can contribute to the source code in our [GitHub](https://github.com/claudiosmweb/author-bio-box) page.
 
 ### Credits ###
 
