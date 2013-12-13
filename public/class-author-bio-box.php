@@ -113,7 +113,7 @@ class Author_Bio_Box {
 
 		if ( function_exists( 'is_multisite' ) && is_multisite() ) {
 
-			if ( $network_wide  ) {
+			if ( $network_wide ) {
 
 				// Get all blog ids
 				$blog_ids = self::get_blog_ids();

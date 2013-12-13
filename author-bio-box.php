@@ -45,11 +45,11 @@ add_action( 'plugins_loaded', array( 'Author_Bio_Box', 'get_instance' ) );
 /**
  * Plugin admin.
  */
-// if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
-// 	require_once plugin_dir_path( __FILE__ ) . 'admin/class-author-bio-box-admin.php';
+if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'admin/class-author-bio-box-admin.php';
 
-// 	add_action( 'plugins_loaded', array( 'Author_Bio_Box_Admin', 'get_instance' ) );
-// }
+	add_action( 'plugins_loaded', array( 'Author_Bio_Box_Admin', 'get_instance' ) );
+}
 
 /**
  * Shows the Author Bio Box.
