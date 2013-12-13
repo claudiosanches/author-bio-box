@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Author Bio Box v2.0.0\n"
+"Project-Id-Version: Author Bio Box v3.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-06-22 01:01:50+0000\n"
+"PO-Revision-Date: 2013-12-13 20:11:34+0000\n"
 "Last-Translator: Claudio Sanches <contato@claudiosmweb.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,166 +20,164 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: author-bio-box-admin.php:48
-#: author-bio-box-admin.php:97
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:88
+#@ author-bio-box
 msgid "Settings"
 msgstr "Configurações"
 
-#: author-bio-box-admin.php:64
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:183
+#@ author-bio-box
 msgid "Facebook"
 msgstr "Facebook"
 
-#: author-bio-box-admin.php:65
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:184
+#@ author-bio-box
 msgid "Twitter"
 msgstr "Twitter"
 
-#: author-bio-box-admin.php:66
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:185
+#@ author-bio-box
 msgid "Google Plus"
 msgstr "Google Plus"
 
-#: author-bio-box-admin.php:67
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:186
+#@ author-bio-box
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: author-bio-box-admin.php:102
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:93
+#@ author-bio-box
 msgid "Display in"
 msgstr "Exibir em"
 
-#: author-bio-box-admin.php:105
+#: admin/class-author-bio-box-admin.php:96
 #, php-format
-#@ authorbiobox
+#@ author-bio-box
 msgid "You can display the box directly into your theme using: %s"
 msgstr "Você pode exibir o box diretamente em seu tema usando: %s"
 
-#: author-bio-box-admin.php:109
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:100
+#@ author-bio-box
 msgid "Only in Posts"
 msgstr "Apenas em Posts"
 
-#: author-bio-box-admin.php:110
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:101
+#@ author-bio-box
 msgid "Homepage and Posts"
 msgstr "Homepage e Posts"
 
-#: author-bio-box-admin.php:111
-#: author-bio-box-admin.php:163
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:102
+#: admin/class-author-bio-box-admin.php:154
+#@ author-bio-box
 msgid "None"
 msgstr "Nenhum"
 
-#: author-bio-box-admin.php:115
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:106
+#@ author-bio-box
 msgid "Design"
 msgstr "Aparência"
 
-#: author-bio-box-admin.php:120
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:111
+#@ author-bio-box
 msgid "Gravatar size"
 msgstr "Tamanho do Gravatar"
 
-#: author-bio-box-admin.php:123
+#: admin/class-author-bio-box-admin.php:114
 #, php-format
-#@ authorbiobox
+#@ author-bio-box
 msgid "Set the Gravatar size (only integers). To configure the profile picture of the author you need to register in %s."
 msgstr "Configure o tamanho do Gravatar (aceita apenas números inteiros). Para configurar a imagem do perfil do autor é necessário fazer cadastro em %s."
 
-#: author-bio-box-admin.php:128
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:119
+#@ author-bio-box
 msgid "Background color"
 msgstr "Cor de fundo"
 
-#: author-bio-box-admin.php:135
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:126
+#@ author-bio-box
 msgid "Text color"
 msgstr "Cor do texto"
 
-#: author-bio-box-admin.php:142
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:133
+#@ author-bio-box
 msgid "Title color"
 msgstr "Cor do título"
 
-#: author-bio-box-admin.php:149
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:140
+#@ author-bio-box
 msgid "Border size"
 msgstr "Cor da borda"
 
-#: author-bio-box-admin.php:153
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:144
+#@ author-bio-box
 msgid "Thickness of the top and bottom edge of the box (only integers)."
 msgstr "Configura a largura da borda no topo e rodapé do box (aceita apenas números inteiros)."
 
-#: author-bio-box-admin.php:157
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:148
+#@ author-bio-box
 msgid "Border style"
 msgstr "Estilo da borda"
 
-#: author-bio-box-admin.php:164
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:155
+#@ author-bio-box
 msgid "Solid"
 msgstr "Sólida"
 
-#: author-bio-box-admin.php:165
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:156
+#@ author-bio-box
 msgid "Dotted"
 msgstr "Pontilhada"
 
-#: author-bio-box-admin.php:166
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:157
+#@ author-bio-box
 msgid "Dashed"
 msgstr "Tracejada"
 
-#: author-bio-box-admin.php:170
-#@ authorbiobox
+#: admin/class-author-bio-box-admin.php:161
+#@ author-bio-box
 msgid "Border color"
 msgstr "Cor da borda"
 
 #. translators: plugin header field 'Name'
-#: author-bio-box-admin.php:263
-#: author-bio-box-admin.php:264
-#: author-bio-box-admin.php:288
+#: admin/class-author-bio-box-admin.php:234
+#: admin/class-author-bio-box-admin.php:235
 #: author-bio-box.php:0
-#@ authorbiobox
+#@ author-bio-box
 msgid "Author Bio Box"
 msgstr "Author Bio Box"
 
 #. translators: plugin header field 'PluginURI'
 #: author-bio-box.php:0
-#@ authorbiobox
+#@ author-bio-box
 msgid "https://github.com/claudiosmweb/author-bio-box"
 msgstr "https://github.com/claudiosmweb/author-bio-box"
 
 #. translators: plugin header field 'Description'
 #: author-bio-box.php:0
-#@ authorbiobox
+#@ author-bio-box
 msgid "Display a box with the author's biography and also social icons in bottom of the post."
 msgstr "Exibe uma caixa com a biografia do autor e também ícones sociais no final do post."
 
 #. translators: plugin header field 'Author'
 #: author-bio-box.php:0
-#@ authorbiobox
+#@ author-bio-box
 msgid "claudiosanches"
 msgstr "claudiosanches"
 
 #. translators: plugin header field 'AuthorURI'
 #: author-bio-box.php:0
-#@ authorbiobox
+#@ author-bio-box
 msgid "http://claudiosmweb.com/"
 msgstr "http://claudiosmweb.com/"
 
-#. translators: plugin header field 'Version'
-#: author-bio-box.php:0
-#@ authorbiobox
-msgid "2.0.0"
-msgstr "2.0.0"
-
-#: author-bio-box.php:115
-#@ authorbiobox
+#: public/class-author-bio-box.php:340
+#@ author-bio-box
 msgid "All posts by"
 msgstr "Todos os posts por"
+
+#. translators: plugin header field 'Version'
+#: author-bio-box.php:0
+#@ author-bio-box
+msgid "3.0.0"
+msgstr "3.0.0"
 
