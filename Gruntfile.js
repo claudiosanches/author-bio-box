@@ -86,7 +86,6 @@ module.exports = function( grunt ) {
 			options: {
 				args: ['--verbose'],
 				exclude: '<%= svn_settings.exclude %>',
-				syncDestIgnoreExcl: true,
 				recursive: true
 			},
 			tag: {
