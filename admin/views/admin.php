@@ -7,6 +7,9 @@
  * @license   GPL-2.0+
  * @copyright 2013 Claudio Sanches
  */
+
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 
 <div class="wrap">
