@@ -1,9 +1,9 @@
 === Author Bio Box ===
 Contributors: claudiosanches
 Tags: author, bio, social
-Requires at least: 3.5
-Tested up to: 3.5.2
-Stable tag: 2.0.0
+Requires at least: 3.8
+Tested up to: 3.8
+Stable tag: 3.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,11 @@ You can contribute to the source code in our [GitHub](https://github.com/claudio
 
 Use this function:
 
-	<?php if ( function_exists( 'get_author_bio_box' ) ) echo get_author_bio_box(); ?>
+	<?php 
+		if ( function_exists( 'get_author_bio_box' ) ) {
+			echo get_author_bio_box();
+		}
+	?>
 
 == Frequently Asked Questions ==
 
@@ -47,6 +51,11 @@ Use this function:
 3. Plugin in action.
 
 == Changelog ==
+
+= 3.0.0 - 13/12/2013 =
+
+* Improved all code.
+* Add support to WordPress 3.8.
 
 = 2.0.0 - 21/06/2013 =
 
