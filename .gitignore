@@ -1,4 +1,4 @@
 node_modules/
 .sass-cache/
-assets/js/admin.min.js
-assets/css/box.css
+admin/assets/js/*.min.js
+public/assets/css/
