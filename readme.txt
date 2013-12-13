@@ -32,7 +32,7 @@ You can contribute to the source code in our [GitHub](https://github.com/claudio
 
 Use this function:
 
-    <?php if ( function_exists( 'get_author_bio_box' ) ) echo get_author_bio_box(); ?>
+	<?php if ( function_exists( 'get_author_bio_box' ) ) echo get_author_bio_box(); ?>
 
 == Frequently Asked Questions ==
 

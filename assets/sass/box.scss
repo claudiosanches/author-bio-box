@@ -2,70 +2,70 @@
 @import "compass/utilities/general/clearfix";
 
 #author-bio-box {
-    @include pie-clearfix;
-    margin: 10px 0;
-    padding: 10px;
+	@include pie-clearfix;
+	margin: 10px 0;
+	padding: 10px;
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
+	* {
+		margin: 0;
+		padding: 0;
+	}
 
-    h3,
-    .bio-description {
-        margin-bottom: 10px;
+	h3,
+	.bio-description {
+		margin-bottom: 10px;
 
-        a {
-            text-decoration: none;
-        }
-    }
+		a {
+			text-decoration: none;
+		}
+	}
 
-    p {
-        margin-bottom: 5px;
-    }
+	p {
+		margin-bottom: 5px;
+	}
 
-    .bio-gravatar {
-        float: left;
+	.bio-gravatar {
+		float: left;
 
-        img {
-            @include border-radius(3px);
-            @include box-shadow(none);
-            background: #fff;
-            border: 1px solid #ccc;
-            margin-right: 15px;
-            padding: 3px;
-        }
-    }
+		img {
+			@include border-radius(3px);
+			@include box-shadow(none);
+			background: #fff;
+			border: 1px solid #ccc;
+			margin-right: 15px;
+			padding: 3px;
+		}
+	}
 
-    .bio-icon {
-        @include opacity(1);
-        @include transition(all 0.4s ease);
-        background-color: transparent;
-        background-image: url('../images/sprite.png');
-        background-repeat: no-repeat;
-        display: inline-block;
-        margin-right: 3px;
-        height: 16px;
-        width: 16px;
+	.bio-icon {
+		@include opacity(1);
+		@include transition(all 0.4s ease);
+		background-color: transparent;
+		background-image: url('../images/sprite.png');
+		background-repeat: no-repeat;
+		display: inline-block;
+		margin-right: 3px;
+		height: 16px;
+		width: 16px;
 
-        &:hover {
-            @include opacity(0.7);
-        }
-    }
+		&:hover {
+			@include opacity(0.7);
+		}
+	}
 
-    .bio-icon-facebook {
-        background-position: 0 0;
-    }
+	.bio-icon-facebook {
+		background-position: 0 0;
+	}
 
-    .bio-icon-twitter {
-        background-position: -16px 0;
-    }
+	.bio-icon-twitter {
+		background-position: -16px 0;
+	}
 
-    .bio-icon-googleplus {
-        background-position: -32px 0;
-    }
+	.bio-icon-googleplus {
+		background-position: -32px 0;
+	}
 
-    .bio-icon-linkedin {
-        background-position: -48px 0;
-    }
+	.bio-icon-linkedin {
+		background-position: -48px 0;
+	}
 }
