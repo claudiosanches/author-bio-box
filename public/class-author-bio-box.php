@@ -320,6 +320,7 @@ class Author_Bio_Box {
 
 		// Set the social icons
 		$social = array(
+			'website'    => get_the_author_meta( 'user_url' ),
 			'facebook'   => get_the_author_meta( 'facebook' ),
 			'twitter'    => get_the_author_meta( 'twitter' ),
 			'googleplus' => get_the_author_meta( 'googleplus' ),
