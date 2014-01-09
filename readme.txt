@@ -3,7 +3,7 @@ Contributors: claudiosanches
 Tags: author, bio, social
 Requires at least: 3.8
 Tested up to: 3.8
-Stable tag: 3.1.0
+Stable tag: 3.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,10 @@ Use this function:
 3. Plugin in action.
 
 == Changelog ==
+
+= 3.1.1 - 08/01/2014 =
+
+* Fixed the Facebook and Twitter icons.
 
 = 3.1.0 - 04/01/2014 =
 
