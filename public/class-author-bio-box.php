@@ -322,9 +322,13 @@ class Author_Bio_Box {
 		$social = array(
 			'website'    => get_the_author_meta( 'user_url' ),
 			'facebook'   => get_the_author_meta( 'facebook' ),
-			'twitter'    => get_the_author_meta( 'twitter' ),
+			'flickr'	 => get_the_author_meta( 'flickr' ),
 			'googleplus' => get_the_author_meta( 'googleplus' ),
-			'linkedin'   => get_the_author_meta( 'linkedin' )
+			'linkedin'   => get_the_author_meta( 'linkedin' ),
+			'tumblr'	 => get_the_author_meta( 'tumblr' ),
+			'twitter'    => get_the_author_meta( 'twitter' ),
+			'vimeo'		 => get_the_author_meta( 'vimeo' ),
+			'youtube'	 => get_the_author_meta( 'youtube' )
 		);
 
 		// Set the styes.
