@@ -319,17 +319,17 @@ class Author_Bio_Box {
 		$gravatar = ! empty( $settings['gravatar'] ) ? $settings['gravatar'] : 70;
 
 		// Set the social icons
-		$social = array(
+		$social = apply_filters( 'authorbiobox_social_data', array(
 			'website'    => get_the_author_meta( 'user_url' ),
 			'facebook'   => get_the_author_meta( 'facebook' ),
-			'flickr'	 => get_the_author_meta( 'flickr' ),
+			'twitter'    => get_the_author_meta( 'twitter' ),
 			'googleplus' => get_the_author_meta( 'googleplus' ),
 			'linkedin'   => get_the_author_meta( 'linkedin' ),
+			'flickr'	 => get_the_author_meta( 'flickr' ),
 			'tumblr'	 => get_the_author_meta( 'tumblr' ),
-			'twitter'    => get_the_author_meta( 'twitter' ),
 			'vimeo'		 => get_the_author_meta( 'vimeo' ),
 			'youtube'	 => get_the_author_meta( 'youtube' )
-		);
+		) );
 
 		// Set the styes.
 		$styles = sprintf(
