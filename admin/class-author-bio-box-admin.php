@@ -172,7 +172,7 @@ class Author_Bio_Box_Admin {
 	/**
 	 * Custom contact methods.
 	 *
-	 * @since  3.0.0
+	 * @since  3.2.0
 	 *
 	 * @param  array $methods Old contact methods.
 	 *

@@ -304,7 +304,7 @@ class Author_Bio_Box {
 	/**
 	 * HTML of the box.
 	 *
-	 * @since  3.0.0
+	 * @since  3.2.0
 	 *
 	 * @param  array $settings Author Bio Box settings.
 	 *

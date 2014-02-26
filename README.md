@@ -2,8 +2,8 @@
 **Contributors:** claudiosanches  
 **Tags:** author, bio, social  
 **Requires at least:** 3.8  
-**Tested up to:** 3.8  
-**Stable tag:** 3.1.1  
+**Tested up to:** 3.8.1  
+**Stable tag:** 3.2.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -57,6 +57,11 @@ Use this function:
 
 
 ## Changelog ##
+
+### 3.2.0 - 26/02/2014 ###
+
+* Added Flickr, Tumblr, Vimeo and YouTube icons.
+* Created the `authorbiobox_social_data` filter for custom icons ordering.
 
 ### 3.1.1 - 08/01/2014 ###
 
