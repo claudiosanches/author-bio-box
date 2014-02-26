@@ -60,7 +60,7 @@ Use this function:
 
 ### 3.2.0 - 26/02/2014 ###
 
-* Added Flickr, Tumblr, Vimeo and YouTube icons.
+* Added Flickr, Tumblr, Vimeo and YouTube icons (thanks [@rafaelfunchal](https://github.com/rafaelfunchal)).
 * Created the `authorbiobox_social_data` filter for custom icons ordering.
 
 ### 3.1.1 - 08/01/2014 ###
