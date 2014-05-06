@@ -287,18 +287,15 @@ class Author_Bio_Box {
 	 * @return bool
 	 */
 	protected function is_display( $settings ) {
-		switch( $settings['display'] ) {
-			case 'posts':
-				return is_single();
-				break;
-			case 'home_posts':
-				return is_single() || is_home();
-				break;
+		$display = false;
 
-			default:
-				return false;
-				break;
+		if ( 'posts' == $settings['display'] ) {
+			$display = is_single();
+		} else if ( 'home_posts' == $settings['display'] ) {
+			$display = is_single() || is_home();
 		}
+
+		return apply_filters( 'authorbiobox_display', $display );
 	}
 
 	/**
