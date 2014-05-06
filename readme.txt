@@ -3,7 +3,7 @@ Contributors: claudiosanches
 Tags: author, bio, social
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 3.2.0
+Stable tag: 3.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,10 @@ Use this function:
 3. Plugin in action.
 
 == Changelog ==
+
+= 3.2.0 - 26/02/2014 =
+
+* Added the `authorbiobox_display` filter.
 
 = 3.2.0 - 26/02/2014 =
 

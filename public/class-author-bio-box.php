@@ -19,11 +19,9 @@ class Author_Bio_Box {
 	/**
 	 * Plugin version, used for cache-busting of style and script file references.
 	 *
-	 * @since 3.0.0
-	 *
 	 * @var   string
 	 */
-	const VERSION = '3.0.0';
+	const VERSION = '3.2.1';
 
 	/**
 	 * Unique identifier for your plugin.
@@ -33,16 +31,12 @@ class Author_Bio_Box {
 	 * of text. Its value should match the Text Domain file header in the main
 	 * plugin file.
 	 *
-	 * @since 3.0.0
-	 *
 	 * @var   string
 	 */
 	protected static $plugin_slug = 'author-bio-box';
 
 	/**
 	 * Instance of this class.
-	 *
-	 * @since 3.0.0
 	 *
 	 * @var   object
 	 */
@@ -51,8 +45,6 @@ class Author_Bio_Box {
 	/**
 	 * Initialize the plugin by setting localization and loading public scripts
 	 * and styles.
-	 *
-	 * @since 3.0.0
 	 */
 	private function __construct() {
 
@@ -72,8 +64,6 @@ class Author_Bio_Box {
 	/**
 	 * Return the plugin slug.
 	 *
-	 * @since  3.0.0
-	 *
 	 * @return Plugin slug variable.
 	 */
 	public static function get_plugin_slug() {
@@ -82,8 +72,6 @@ class Author_Bio_Box {
 
 	/**
 	 * Return an instance of this class.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @return object A single instance of this class.
 	 */
@@ -99,8 +87,6 @@ class Author_Bio_Box {
 
 	/**
 	 * Fired when the plugin is activated.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @param  boolean $network_wide True if WPMU superadmin uses
 	 *                               "Network Activate" action, false if
@@ -138,8 +124,6 @@ class Author_Bio_Box {
 
 	/**
 	 * Fired when the plugin is deactivated.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @param  boolean $network_wide True if WPMU superadmin uses
 	 *                               "Network Deactivate" action, false if
@@ -179,8 +163,6 @@ class Author_Bio_Box {
 	/**
 	 * Fired when a new site is activated with a WPMU environment.
 	 *
-	 * @since  3.0.0
-	 *
 	 * @param  int  $blog_id ID of the new blog.
 	 *
 	 * @return void
@@ -202,8 +184,6 @@ class Author_Bio_Box {
 	 * - not spam
 	 * - not deleted
 	 *
-	 * @since  3.0.0
-	 *
 	 * @return array|false The blog ids, false if no matches.
 	 */
 	private static function get_blog_ids() {
@@ -220,8 +200,6 @@ class Author_Bio_Box {
 
 	/**
 	 * Fired for each blog when the plugin is activated.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @return void
 	 */
@@ -243,8 +221,6 @@ class Author_Bio_Box {
 	/**
 	 * Fired for each blog when the plugin is deactivated.
 	 *
-	 * @since  3.0.0
-	 *
 	 * @return void
 	 */
 	private static function single_deactivate() {
@@ -253,8 +229,6 @@ class Author_Bio_Box {
 
 	/**
 	 * Load the plugin text domain for translation.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @return void
 	 */
@@ -269,8 +243,6 @@ class Author_Bio_Box {
 	/**
 	 * Register and enqueue public-facing style sheet.
 	 *
-	 * @since  3.0.0
-	 *
 	 * @return void
 	 */
 	public function enqueue_styles() {
@@ -279,8 +251,6 @@ class Author_Bio_Box {
 
 	/**
 	 * Checks if can display the box.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @param  array $settings Author Bio Box settings.
 	 *
@@ -300,8 +270,6 @@ class Author_Bio_Box {
 
 	/**
 	 * HTML of the box.
-	 *
-	 * @since  3.2.0
 	 *
 	 * @param  array $settings Author Bio Box settings.
 	 *
@@ -356,8 +324,6 @@ class Author_Bio_Box {
 
 	/**
 	 * Insert the box in the content.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @param  string $content WP the content.
 	 *

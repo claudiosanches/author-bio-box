@@ -1,7 +1,7 @@
 {
   "name": "author-bio-box",
   "description": "Display a box with the author's biography and also social icons in bottom of the post",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "~0.4.1",
