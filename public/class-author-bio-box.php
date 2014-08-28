@@ -24,18 +24,6 @@ class Author_Bio_Box {
 	const VERSION = '3.2.1';
 
 	/**
-	 * Unique identifier for your plugin.
-	 *
-	 *
-	 * The variable name is used as the text domain when internationalizing strings
-	 * of text. Its value should match the Text Domain file header in the main
-	 * plugin file.
-	 *
-	 * @var   string
-	 */
-	protected static $plugin_slug = 'author-bio-box';
-
-	/**
 	 * Instance of this class.
 	 *
 	 * @var   object
@@ -59,15 +47,6 @@ class Author_Bio_Box {
 
 		// Display the box.
 		add_filter( 'the_content', array( $this, 'display' ), 9999 );
-	}
-
-	/**
-	 * Return the plugin slug.
-	 *
-	 * @return Plugin slug variable.
-	 */
-	public static function get_plugin_slug() {
-		return self::$plugin_slug;
 	}
 
 	/**
@@ -233,11 +212,10 @@ class Author_Bio_Box {
 	 * @return void
 	 */
 	public function load_plugin_textdomain() {
-		$domain = self::get_plugin_slug();
-		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+		$locale = apply_filters( 'plugin_locale', get_locale(), 'author-bio-box' );
 
-		load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
-		load_plugin_textdomain( $domain, FALSE, basename( plugin_dir_path( dirname( __FILE__ ) ) ) . '/languages/' );
+		load_textdomain( 'author-bio-box', trailingslashit( WP_LANG_DIR ) . 'author-bio-box/author-bio-box-' . $locale . '.mo' );
+		load_plugin_textdomain( 'author-bio-box', FALSE, basename( plugin_dir_path( dirname( __FILE__ ) ) ) . '/languages/' );
 	}
 
 	/**
@@ -246,7 +224,7 @@ class Author_Bio_Box {
 	 * @return void
 	 */
 	public function enqueue_styles() {
-		wp_register_style( self::get_plugin_slug() . '-styles', plugins_url( 'assets/css/public.css', __FILE__ ), array(), self::VERSION, 'all' );
+		wp_register_style( 'author-bio-box-styles', plugins_url( 'assets/css/public.css', __FILE__ ), array(), self::VERSION, 'all' );
 	}
 
 	/**
@@ -278,7 +256,7 @@ class Author_Bio_Box {
 	public static function view( $settings ) {
 
 		// Load the styles.
-		wp_enqueue_style( self::get_plugin_slug() . '-styles' );
+		wp_enqueue_style( 'author-bio-box-styles' );
 
 		// Set the gravatar size.
 		$gravatar = ! empty( $settings['gravatar'] ) ? $settings['gravatar'] : 70;
@@ -307,7 +285,7 @@ class Author_Bio_Box {
 		);
 
 		$html = '<div id="author-bio-box" style="' . $styles . '">';
-		$html .= '<h3><a style="color: ' . $settings['title_color'] . ';" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( __( 'All posts by', self::get_plugin_slug() ) . ' ' . get_the_author() ) .'" rel="author">' . get_the_author() . '</a></h3>';
+		$html .= '<h3><a style="color: ' . $settings['title_color'] . ';" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( __( 'All posts by', 'author-bio-box' ) . ' ' . get_the_author() ) .'" rel="author">' . get_the_author() . '</a></h3>';
 		$html .= '<div class="bio-gravatar">' . get_avatar( get_the_author_meta('ID'), $gravatar ) . '</div>';
 
 		foreach ( $social as $key => $value ) {
