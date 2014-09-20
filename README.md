@@ -2,7 +2,7 @@
 **Contributors:** claudiosanches  
 **Tags:** author, bio, social  
 **Requires at least:** 3.8  
-**Tested up to:** 3.9  
+**Tested up to:** 4.0  
 **Stable tag:** 3.2.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
@@ -47,13 +47,13 @@ Use this function:
 ## Screenshots ##
 
 ### 1. Settings page. ###
-![1. Settings page.](http://s.wordpress.org/extend/plugins/author-bio-box/screenshot-1.png)
+![1. Settings page.](http://ps.w.org/author-bio-box/assets/screenshot-1.png)
 
 ### 2. New fields in "Your Profile" page. ###
-![2. New fields in "Your Profile" page.](http://s.wordpress.org/extend/plugins/author-bio-box/screenshot-2.png)
+![2. New fields in "Your Profile" page.](http://ps.w.org/author-bio-box/assets/screenshot-2.png)
 
 ### 3. Plugin in action. ###
-![3. Plugin in action.](http://s.wordpress.org/extend/plugins/author-bio-box/screenshot-3.png)
+![3. Plugin in action.](http://ps.w.org/author-bio-box/assets/screenshot-3.png)
 
 
 ## Changelog ##
