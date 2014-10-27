@@ -72,7 +72,9 @@ class Author_Bio_Box_Frontend {
 			'flickr'	 => get_the_author_meta( 'flickr' ),
 			'tumblr'	 => get_the_author_meta( 'tumblr' ),
 			'vimeo'		 => get_the_author_meta( 'vimeo' ),
-			'youtube'	 => get_the_author_meta( 'youtube' )
+			'youtube'	 => get_the_author_meta( 'youtube' ),
+			'instagram'	 => get_the_author_meta( 'instagram' ),
+			'pinterest'	 => get_the_author_meta( 'pinterest' )
 		) );
 
 		// Set the styes.
