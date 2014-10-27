@@ -1,46 +1,24 @@
 <?php
-/**
- * Author Bio Box.
- *
- * @package   Author_Bio_Box
- * @author    Claudio Sanches <contato@claudiosmweb.com>
- * @license   GPL-2.0+
- * @copyright 2013 Claudio Sanches
- */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 /**
- * Author_Bio_Box_Admin class.
- *
- * @package   Author_Bio_Box_Admin
- * @author    Claudio Sanches <contato@claudiosmweb.com>
+ * Author Bio Box Admin class.
  */
 class Author_Bio_Box_Admin {
 
 	/**
-	 * Instance of this class.
-	 *
-	 * @since 3.0.0
-	 *
-	 * @var   object
-	 */
-	protected static $instance = null;
-
-	/**
 	 * Slug of the plugin screen.
 	 *
-	 * @since 3.0.0
-	 *
-	 * @var   string
+	 * @var string
 	 */
 	protected $plugin_screen_hook_suffix = null;
 
 	/**
-	 * Initialize the plugin by loading admin scripts & styles and adding a
-	 * settings page and menu.
-	 *
-	 * @since 3.0.0
+	 * Initialize the plugin admin.
 	 */
-	private function __construct() {
+	public function __construct() {
 
 		// Custom contact methods.
 		add_filter( 'user_contactmethods', array( $this, 'contact_methods' ), 10, 1 );
@@ -56,26 +34,7 @@ class Author_Bio_Box_Admin {
 	}
 
 	/**
-	 * Return an instance of this class.
-	 *
-	 * @since  3.0.0
-	 *
-	 * @return object A single instance of this class.
-	 */
-	public static function get_instance() {
-
-		// If the single instance hasn't been set, set it now.
-		if ( null == self::$instance ) {
-			self::$instance = new self;
-		}
-
-		return self::$instance;
-	}
-
-	/**
 	 * Sets default settings.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @return array Plugin default settings.
 	 */
@@ -84,83 +43,83 @@ class Author_Bio_Box_Admin {
 		$settings = array(
 			'settings' => array(
 				'title' => __( 'Settings', 'author-bio-box' ),
-				'type' => 'section',
-				'menu' => 'authorbiobox_settings'
+				'type'  => 'section',
+				'menu'  => 'authorbiobox_settings'
 			),
 			'display' => array(
-				'title' => __( 'Display in', 'author-bio-box' ),
-				'default' => 'posts',
-				'type' => 'select',
+				'title'       => __( 'Display in', 'author-bio-box' ),
+				'default'     => 'posts',
+				'type'        => 'select',
 				'description' => sprintf( __( 'You can display the box directly into your theme using: %s', 'author-bio-box' ), '<br /><code>&lt;?php if ( function_exists( \'get_author_bio_box\' ) ) echo get_author_bio_box(); ?&gt;</code>' ),
-				'section' => 'settings',
-				'menu' => 'authorbiobox_settings',
-				'options' => array(
-					'posts' => __( 'Only in Posts', 'author-bio-box' ),
+				'section'     => 'settings',
+				'menu'        => 'authorbiobox_settings',
+				'options'     => array(
+					'posts'      => __( 'Only in Posts', 'author-bio-box' ),
 					'home_posts' => __( 'Homepage and Posts', 'author-bio-box' ),
-					'none' => __( 'None', 'author-bio-box' ),
+					'none'       => __( 'None', 'author-bio-box' ),
 				)
 			),
 			'design' => array(
 				'title' => __( 'Design', 'author-bio-box' ),
-				'type' => 'section',
-				'menu' => 'authorbiobox_settings'
+				'type'  => 'section',
+				'menu'  => 'authorbiobox_settings'
 			),
 			'gravatar' => array(
-				'title' => __( 'Gravatar size', 'author-bio-box' ),
-				'default' => 70,
-				'type' => 'text',
+				'title'       => __( 'Gravatar size', 'author-bio-box' ),
+				'default'     => 70,
+				'type'        => 'text',
 				'description' => sprintf( __( 'Set the Gravatar size (only integers). To configure the profile picture of the author you need to register in %s.', 'author-bio-box' ), '<a href="gravatar.com">gravatar.com</a>' ),
-				'section' => 'design',
-				'menu' => 'authorbiobox_settings'
+				'section'     => 'design',
+				'menu'        => 'authorbiobox_settings'
 			),
 			'background_color' => array(
-				'title' => __( 'Background color', 'author-bio-box' ),
+				'title'   => __( 'Background color', 'author-bio-box' ),
 				'default' => '#f8f8f8',
-				'type' => 'color',
+				'type'    => 'color',
 				'section' => 'design',
-				'menu' => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings'
 			),
 			'text_color' => array(
-				'title' => __( 'Text color', 'author-bio-box' ),
+				'title'   => __( 'Text color', 'author-bio-box' ),
 				'default' => '#333333',
-				'type' => 'color',
+				'type'    => 'color',
 				'section' => 'design',
-				'menu' => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings'
 			),
 			'title_color' => array(
-				'title' => __( 'Title color', 'author-bio-box' ),
+				'title'   => __( 'Title color', 'author-bio-box' ),
 				'default' => '#555555',
-				'type' => 'color',
+				'type'    => 'color',
 				'section' => 'design',
-				'menu' => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings'
 			),
 			'border_size' => array(
-				'title' => __( 'Border size', 'author-bio-box' ),
-				'default' => 2,
-				'type' => 'text',
-				'section' => 'design',
+				'title'       => __( 'Border size', 'author-bio-box' ),
+				'default'     => 2,
+				'type'        => 'text',
+				'section'     => 'design',
 				'description' => __( 'Thickness of the top and bottom edge of the box (only integers).', 'author-bio-box' ),
-				'menu' => 'authorbiobox_settings'
+				'menu'        => 'authorbiobox_settings'
 			),
 			'border_style' => array(
-				'title' => __( 'Border style', 'author-bio-box' ),
+				'title'   => __( 'Border style', 'author-bio-box' ),
 				'default' => 'solid',
-				'type' => 'select',
+				'type'    => 'select',
 				'section' => 'design',
-				'menu' => 'authorbiobox_settings',
+				'menu'    => 'authorbiobox_settings',
 				'options' => array(
-					'none' => __( 'None', 'author-bio-box' ),
-					'solid' => __( 'Solid', 'author-bio-box' ),
+					'none'   => __( 'None', 'author-bio-box' ),
+					'solid'  => __( 'Solid', 'author-bio-box' ),
 					'dotted' => __( 'Dotted', 'author-bio-box' ),
 					'dashed' => __( 'Dashed', 'author-bio-box' )
 				)
 			),
 			'border_color' => array(
-				'title' => __( 'Border color', 'author-bio-box' ),
+				'title'   => __( 'Border color', 'author-bio-box' ),
 				'default' => '#cccccc',
-				'type' => 'color',
+				'type'    => 'color',
 				'section' => 'design',
-				'menu' => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings'
 			),
 		);
 
@@ -169,8 +128,6 @@ class Author_Bio_Box_Admin {
 
 	/**
 	 * Custom contact methods.
-	 *
-	 * @since  3.2.0
 	 *
 	 * @param  array $methods Old contact methods.
 	 *
@@ -198,8 +155,6 @@ class Author_Bio_Box_Admin {
 	/**
 	 * Register and enqueue admin-specific JavaScript.
 	 *
-	 * @since  3.0.0
-	 *
 	 * @return null Return early if no settings page is registered.
 	 */
 	public function enqueue_admin_scripts() {
@@ -209,25 +164,19 @@ class Author_Bio_Box_Admin {
 		}
 
 		$screen = get_current_screen();
+
 		if ( $this->plugin_screen_hook_suffix == $screen->id ) {
+			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+
 			wp_enqueue_script( 'wp-color-picker' );
 			wp_enqueue_style( 'wp-color-picker' );
 
-			wp_enqueue_script(
-				'author-bio-box-admin',
-				plugins_url( 'assets/js/admin.min.js', __FILE__ ),
-				array( 'jquery', 'wp-color-picker' ),
-				null,
-				true
-			);
+			wp_enqueue_script( 'author-bio-box-admin', Author_Bio_Box::get_assets_url() . 'js/admin' . $suffix . '.js', array( 'jquery', 'wp-color-picker' ), Author_Bio_Box::VERSION, true );
 		}
 	}
 
 	/**
-	 * Register the administration menu for this plugin into the
-	 * WordPress Dashboard menu.
-	 *
-	 * @since 3.0.0
+	 * Register the administration menu.
 	 *
 	 * @return void
 	 */
@@ -243,8 +192,6 @@ class Author_Bio_Box_Admin {
 
 	/**
 	 * Plugin settings form fields.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @return void
 	 */
@@ -270,9 +217,9 @@ class Author_Bio_Box_Admin {
 						$value['menu'],
 						$value['section'],
 						array(
-							'menu' => $value['menu'],
-							'id' => $key,
-							'class' => 'small-text',
+							'menu'        => $value['menu'],
+							'id'          => $key,
+							'class'       => 'small-text',
 							'description' => isset( $value['description'] ) ? $value['description'] : ''
 						)
 					);
@@ -285,10 +232,10 @@ class Author_Bio_Box_Admin {
 						$value['menu'],
 						$value['section'],
 						array(
-							'menu' => $value['menu'],
-							'id' => $key,
+							'menu'        => $value['menu'],
+							'id'          => $key,
 							'description' => isset( $value['description'] ) ? $value['description'] : '',
-							'options' => $value['options']
+							'options'     => $value['options']
 						)
 					);
 					break;
@@ -300,8 +247,8 @@ class Author_Bio_Box_Admin {
 						$value['menu'],
 						$value['section'],
 						array(
-							'menu' => $value['menu'],
-							'id' => $key,
+							'menu'        => $value['menu'],
+							'id'          => $key,
 							'description' => isset( $value['description'] ) ? $value['description'] : ''
 						)
 					);
@@ -319,8 +266,6 @@ class Author_Bio_Box_Admin {
 
 	/**
 	 * Text element fallback.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @param  array $args Field arguments.
 	 *
@@ -351,8 +296,6 @@ class Author_Bio_Box_Admin {
 
 	/**
 	 * Select field fallback.
-	 *
-	 * @since  3.0.0
 	 *
 	 * @param  array $args Field arguments.
 	 *
@@ -390,8 +333,6 @@ class Author_Bio_Box_Admin {
 	/**
 	 * Color element fallback.
 	 *
-	 * @since  3.0.0
-	 *
 	 * @param  array $args Field arguments.
 	 *
 	 * @return string      Color field.
@@ -421,8 +362,6 @@ class Author_Bio_Box_Admin {
 	/**
 	 * Valid options.
 	 *
-	 * @since  3.0.0
-	 *
 	 * @param  array $input options to valid.
 	 *
 	 * @return array        validated options.
@@ -447,11 +386,11 @@ class Author_Bio_Box_Admin {
 
 	/**
 	 * Render the settings page for this plugin.
-	 *
-	 * @since 3.0.0
 	 */
 	public function display_plugin_admin_page() {
-		include_once 'views/admin.php';
+		include_once 'views/html-plugin-settings.php';
 	}
 
 }
+
+new Author_Bio_Box_Admin();

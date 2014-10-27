@@ -1,15 +1,7 @@
 <?php
-/**
- * Plugin options view.
- *
- * @package   Author_Bio_Box
- * @author    Claudio Sanches <contato@claudiosmweb.com>
- * @license   GPL-2.0+
- * @copyright 2013 Claudio Sanches
- */
-
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 ?>
 
 <div class="wrap">

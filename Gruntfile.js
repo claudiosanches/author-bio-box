@@ -1,10 +1,18 @@
-/* jshint node:true */
+/*jshint node:true */
 module.exports = function( grunt ) {
 	'use strict';
 
 	grunt.initConfig( {
 
-		// gets the package vars
+		// Setting folder templates
+		dirs: {
+			css:    'assets/css',
+			fonts:  'assets/fonts',
+			images: 'assets/images',
+			js:     'assets/js'
+		},
+
+		// Gets the package vars
 		pkg: grunt.file.readJSON( 'package.json' ),
 		svn_settings: {
 			path: '../../../../wp_plugins/<%= pkg.name %>',
@@ -14,9 +22,6 @@ module.exports = function( grunt ) {
 				'.git/',
 				'.sass-cache/',
 				'node_modules/',
-				'admin/assets/js/admin.js',
-				'public/assets/sass/',
-				'public/assets/images/sprite.svg',
 				'.editorconfig',
 				'.gitignore',
 				'.jshintrc',
@@ -27,36 +32,47 @@ module.exports = function( grunt ) {
 			]
 		},
 
-		// javascript linting with jshint
+		// Javascript linting with jshint
 		jshint: {
 			options: {
 				jshintrc: '.jshintrc'
 			},
 			all: [
 				'Gruntfile.js',
-				'admin/assets/js/admin.js'
+				'<%= dirs.js %>/*.js',
+				'!<%= dirs.js %>/*.min.js'
 			]
 		},
 
-		// uglify to concat and minify
+		// Minify .js files
 		uglify: {
+			options: {
+				preserveComments: 'some'
+			},
 			dist: {
-				files: {
-					'admin/assets/js/admin.min.js': ['admin/assets/js/admin.js']
-				}
+				files: [{
+					expand: true,
+					cwd: '<%= dirs.js %>/',
+					src: [
+						'*.js',
+						'!*.min.js'
+					],
+					dest: '<%= dirs.js %>/',
+					ext: '.min.js'
+				}]
 			}
 		},
 
-		// compass and scss
+		// Compile the CSS with Compass
 		compass: {
 			dist: {
 				options: {
 					httpPath: '',
-					sassDir: 'public/assets/sass',
-					cssDir: 'public/assets/css',
-					imagesDir: 'public/assets/images',
-					javascriptsDir: 'public/assets/js',
-					fontsDir: 'public/assets/fonts',
+					sassDir: '<%= dirs.css %>',
+					cssDir: '<%= dirs.css %>',
+					imagesDir: '<%= dirs.images %>',
+					javascriptsDir: '<%= dirs.js %>',
+					fontsDir: '<%= dirs.fonts %>',
 					environment: 'production',
 					relativeAssets: true,
 					noLineComments: true,
@@ -65,11 +81,11 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// watch for changes and trigger compass
+		// Watch changes for assets
 		watch: {
 			compass: {
 				files: [
-					'public/assets/sass/**'
+					'<%= dirs.css %>/*.scss'
 				],
 				tasks: ['compass']
 			},
@@ -81,11 +97,12 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// rsync commands used to take the files to svn repository
+		// Rsync commands used to take the files to svn repository
 		rsync: {
 			options: {
 				args: ['--verbose'],
 				exclude: '<%= svn_settings.exclude %>',
+				syncDest: true,
 				recursive: true
 			},
 			tag: {
@@ -96,14 +113,26 @@ module.exports = function( grunt ) {
 			},
 			trunk: {
 				options: {
-					src: './',
-					dest: '<%= svn_settings.trunk %>'
+				src: './',
+				dest: '<%= svn_settings.trunk %>'
 				}
 			}
 		},
 
-		// shell command to commit the new version of the plugin
+		// Shell command to commit the new version of the plugin
 		shell: {
+			// Remove delete files.
+			svn_remove: {
+				command: 'svn st | grep \'^!\' | awk \'{print $2}\' | xargs svn --force delete',
+				options: {
+					stdout: true,
+					stderr: true,
+					execOptions: {
+						cwd: '<%= svn_settings.path %>'
+					}
+				}
+			},
+			// Add new files.
 			svn_add: {
 				command: 'svn add --force * --auto-props --parents --depth infinity -q',
 				options: {
@@ -114,6 +143,7 @@ module.exports = function( grunt ) {
 					}
 				}
 			},
+			// Commit the changes.
 			svn_commit: {
 				command: 'svn commit -m "updated the plugin version to <%= pkg.version %>"',
 				options: {
@@ -135,18 +165,28 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-rsync' );
 	grunt.loadNpmTasks( 'grunt-shell' );
 
-	// default task
+	// Default task
 	grunt.registerTask( 'default', [
 		'jshint',
 		'compass',
 		'uglify'
 	] );
 
-	// deploy task
+	// Deploy task
 	grunt.registerTask( 'deploy', [
 		'default',
 		'rsync:tag',
 		'rsync:trunk',
+		'shell:svn_add',
+		'shell:svn_commit'
+	] );
+
+	// Upgrade task
+	grunt.registerTask( 'upgrade', [
+		'default',
+		'rsync:tag',
+		'rsync:trunk',
+		'shell:svn_remove',
 		'shell:svn_add',
 		'shell:svn_commit'
 	] );

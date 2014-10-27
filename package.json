@@ -1,15 +1,19 @@
 {
   "name": "author-bio-box",
   "description": "Display a box with the author's biography and also social icons in bottom of the post",
-  "version": "3.2.1",
+  "version": "3.3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/claudiosmweb/author-bio-box.git"
+  },
   "main": "Gruntfile.js",
-  "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-compass": "~0.7.0",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-uglify": "~0.2.7",
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.7.2",
     "grunt-rsync": "~0.2.1",
-    "grunt-shell": "~0.6.1"
+    "grunt-shell": "~0.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.7.2"
   }
 }

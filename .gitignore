@@ -1,4 +1,2 @@
 node_modules/
 .sass-cache/
-admin/assets/js/*.min.js
-public/assets/css/
