@@ -1,9 +1,10 @@
 === Author Bio Box ===
 Contributors: claudiosanches
+Donate link: http://claudiosmweb.com/doacoes/
 Tags: author, bio, social
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 3.2.1
+Stable tag: 3.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,29 +53,33 @@ Use this function:
 
 == Changelog ==
 
-= 3.2.0 - 26/02/2014 =
+= 3.3.0 - 2014/02/26 =
+
+* Added Instagram and Pinterest icons (Thanks Jeremy Caris).
+
+= 3.2.0 - 2014/02/26 =
 
 * Added the `authorbiobox_display` filter.
 
-= 3.2.0 - 26/02/2014 =
+= 3.2.0 - 2014/02/26 =
 
 * Added Flickr, Tumblr, Vimeo and YouTube icons (thanks [@rafaelfunchal](https://github.com/rafaelfunchal)).
 * Created the `authorbiobox_social_data` filter for custom icons ordering.
 
-= 3.1.1 - 08/01/2014 =
+= 3.1.1 - 2014/01/08 =
 
 * Fixed the Facebook and Twitter icons.
 
-= 3.1.0 - 04/01/2014 =
+= 3.1.0 - 2014/01/04 =
 
 * Added website icon.
 
-= 3.0.0 - 13/12/2013 =
+= 3.0.0 - 2013/12/13 =
 
 * Improved all code.
 * Add support to WordPress 3.8.
 
-= 2.0.0 - 21/06/2013 =
+= 2.0.0 - 2013/06/21 =
 
 * Source code reformulation.
 * Improved performance with fewer options in the database.
