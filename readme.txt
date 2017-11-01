@@ -1,10 +1,10 @@
 === Author Bio Box ===
 Contributors: claudiosanches
-Donate link: http://claudiosmweb.com/doacoes/
+Donate link: https://claudiosanches.com/doacoes/
 Tags: author, bio, social
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 3.3.0
+Tested up to: 4.9
+Stable tag: 3.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ Display a box with the author's biography and also social icons in bottom of the
 
 = Contribute =
 
-You can contribute to the source code in our [GitHub](https://github.com/claudiosmweb/author-bio-box) page.
+You can contribute to the source code in our [GitHub](https://github.com/claudiosanches/author-bio-box) page.
 
 = Credits =
 
@@ -52,6 +52,10 @@ Use this function:
 3. Plugin in action.
 
 == Changelog ==
+
+= 3.3.1 - 2017/11/01 =
+
+* Added rel nofollow to social media links.
 
 = 3.3.0 - 2014/02/26 =
 

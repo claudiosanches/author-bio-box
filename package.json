@@ -1,7 +1,7 @@
 {
   "name": "author-bio-box",
   "description": "Display a box with the author's biography and also social icons in bottom of the post",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/claudiosmweb/author-bio-box.git"

@@ -1,16 +1,16 @@
 <?php
 /**
  * Plugin Name: Author Bio Box
- * Plugin URI: https://github.com/claudiosmweb/author-bio-box
+ * Plugin URI: https://github.com/claudiosanches/author-bio-box
  * Description: Display a box with the author's biography and also social icons in bottom of the post.
- * Version: 3.3.0
+ * Version: 3.3.1
  * Author: claudiosanches
- * Author URI: http://claudiosmweb.com/
+ * Author URI: http://claudiosanches.com/
  * Text Domain: author-bio-box
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path: /languages
- * GitHub Plugin URI: https://github.com/claudiosmweb/author-bio-box
+ * GitHub Plugin URI: https://github.com/claudiosanches/author-bio-box
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -29,7 +29,7 @@ class Author_Bio_Box {
 	 *
 	 * @var string
 	 */
-	const VERSION = '3.3.0';
+	const VERSION = '3.3.1';
 
 	/**
 	 * Instance of this class.
