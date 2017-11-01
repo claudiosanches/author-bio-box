@@ -93,7 +93,7 @@ class Author_Bio_Box_Frontend {
 
 		foreach ( $social as $key => $value ) {
 			if ( ! empty( $value ) ) {
-				$html .= '<a target="_blank" href="' . esc_url( $value ) . '" class="bio-icon bio-icon-' . $key . '"></a>';
+				$html .= '<a target="_blank" rel="nofollow noopener noreferrer" href="' . esc_url( $value ) . '" class="bio-icon bio-icon-' . $key . '"></a>';
 			}
 		}
 
