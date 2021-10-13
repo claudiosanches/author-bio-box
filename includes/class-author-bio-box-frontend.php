@@ -60,7 +60,12 @@ class Author_Bio_Box_Frontend {
 		wp_enqueue_style( 'author-bio-box-styles' );
 
 		// Set the gravatar size.
-		$gravatar = ! empty( $settings['gravatar'] ) ? $settings['gravatar'] : 70;
+		$gravatar_size = (int) $settings['gravatar'];
+		$gravatar_size = 0 < $gravatar_size ? $gravatar_size : 70;
+
+		// Set border size.
+		$border_size = (int) $settings['border_size'];
+		$border_size = 0 < $border_size ? $border_size : 2;
 
 		// Set the social icons
 		$social = apply_filters( 'authorbiobox_social_data', array(
@@ -81,23 +86,23 @@ class Author_Bio_Box_Frontend {
 		$styles = sprintf(
 			'background: %1$s; border-top: %2$spx %3$s %4$s; border-bottom: %2$spx %3$s %4$s; color: %5$s',
 			$settings['background_color'],
-			$settings['border_size'],
+			$border_size,
 			$settings['border_style'],
 			$settings['border_color'],
 			$settings['text_color']
 		);
 
-		$html = '<div id="author-bio-box" style="' . $styles . '">';
-		$html .= '<h3><a style="color: ' . $settings['title_color'] . ';" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( __( 'All posts by', 'author-bio-box' ) . ' ' . get_the_author() ) .'" rel="author">' . get_the_author() . '</a></h3>';
-		$html .= '<div class="bio-gravatar">' . get_avatar( get_the_author_meta('ID'), $gravatar ) . '</div>';
+		$html = '<div id="author-bio-box" style="' . esc_attr( $styles ) . '">';
+		$html .= '<h3><a style="color: ' . esc_attr( $settings['title_color'] ) . ';" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( __( 'All posts by', 'author-bio-box' ) . ' ' . get_the_author() ) .'" rel="author">' . esc_html( get_the_author() ) . '</a></h3>';
+		$html .= '<div class="bio-gravatar">' . get_avatar( get_the_author_meta('ID'), (int) $gravatar_size ) . '</div>';
 
 		foreach ( $social as $key => $value ) {
 			if ( ! empty( $value ) ) {
-				$html .= '<a target="_blank" rel="nofollow noopener noreferrer" href="' . esc_url( $value ) . '" class="bio-icon bio-icon-' . $key . '"></a>';
+				$html .= '<a target="_blank" rel="nofollow noopener noreferrer" href="' . esc_url( $value ) . '" class="bio-icon bio-icon-' . esc_attr( $key ) . '"></a>';
 			}
 		}
 
-		$html .= '<p class="bio-description">' . apply_filters( 'authorbiobox_author_description', get_the_author_meta( 'description' ) ) . '</p>';
+		$html .= '<p class="bio-description">' . wp_kses_post( apply_filters( 'authorbiobox_author_description', get_the_author_meta( 'description' ) ) ) . '</p>';
 		$html .= '</div>';
 
 		return $html;

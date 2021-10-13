@@ -67,7 +67,7 @@ class Author_Bio_Box_Admin {
 			'gravatar' => array(
 				'title'       => __( 'Gravatar size', 'author-bio-box' ),
 				'default'     => 70,
-				'type'        => 'text',
+				'type'        => 'number',
 				'description' => sprintf( __( 'Set the Gravatar size (only integers). To configure the profile picture of the author you need to register in %s.', 'author-bio-box' ), '<a href="gravatar.com">gravatar.com</a>' ),
 				'section'     => 'design',
 				'menu'        => 'authorbiobox_settings'
@@ -96,7 +96,7 @@ class Author_Bio_Box_Admin {
 			'border_size' => array(
 				'title'       => __( 'Border size', 'author-bio-box' ),
 				'default'     => 2,
-				'type'        => 'text',
+				'type'        => 'number',
 				'section'     => 'design',
 				'description' => __( 'Thickness of the top and bottom edge of the box (only integers).', 'author-bio-box' ),
 				'menu'        => 'authorbiobox_settings'
@@ -211,11 +211,11 @@ class Author_Bio_Box_Admin {
 						$value['menu']
 					);
 					break;
-				case 'text':
+				case 'number':
 					add_settings_field(
 						$key,
 						$value['title'],
-						array( $this, 'text_element_callback' ),
+						array( $this, 'number_element_callback' ),
 						$value['menu'],
 						$value['section'],
 						array(
@@ -267,13 +267,13 @@ class Author_Bio_Box_Admin {
 	}
 
 	/**
-	 * Text element fallback.
+	 * Number element fallback.
 	 *
 	 * @param  array $args Field arguments.
 	 *
-	 * @return string      Text field.
+	 * @return string      Number field.
 	 */
-	public function text_element_callback( $args ) {
+	public function number_element_callback( $args ) {
 		$menu  = $args['menu'];
 		$id    = $args['id'];
 		$class = isset( $args['class'] ) ? $args['class'] : 'small-text';
@@ -286,7 +286,7 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '';
 		}
 
-		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="%4$s" />', $id, $menu, $current, $class );
+		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="%4$s" />', $id, $menu, (int) $current, $class );
 
 		// Displays option description.
 		if ( isset( $args['description'] ) ) {
@@ -351,7 +351,7 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '#333333';
 		}
 
-		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="author-bio-box-color-field" />', $id, $menu, $current );
+		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="author-bio-box-color-field" />', $id, $menu, sanitize_hex_color( $current ) );
 
 		// Displays option description.
 		if ( isset( $args['description'] ) ) {
@@ -377,9 +377,13 @@ class Author_Bio_Box_Admin {
 
 			// Check to see if the current option has a value. If so, process it.
 			if ( isset( $input[ $key ] ) ) {
-
-				// Strip all HTML and PHP tags and properly handle quoted strings.
-				$output[ $key ] = sanitize_text_field( $input[ $key ] );
+				if ( in_array( $key, array( 'gravatar', 'border_size' ), true ) ) {
+					$output[ $key ] = (int) $input[ $key ];
+				} elseif ( in_array( $key, array( 'background_color', 'text_color', 'title_color', 'border_color' ), true ) ) {
+					$output[ $key ] = sanitize_hex_color( $input[ $key ] );
+				} else {
+					$output[ $key ] = sanitize_text_field( $input[ $key ] );
+				}
 			}
 		}
 
