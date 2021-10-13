@@ -50,6 +50,7 @@ class Author_Bio_Box_Admin {
 				'title'       => __( 'Display in', 'author-bio-box' ),
 				'default'     => 'posts',
 				'type'        => 'select',
+				/* translators: %s: function example */
 				'description' => sprintf( __( 'You can display the box directly into your theme using: %s', 'author-bio-box' ), '<br /><code>&lt;?php if ( function_exists( \'get_author_bio_box\' ) ) echo get_author_bio_box(); ?&gt;</code>' ),
 				'section'     => 'settings',
 				'menu'        => 'authorbiobox_settings',
@@ -68,6 +69,7 @@ class Author_Bio_Box_Admin {
 				'title'       => __( 'Gravatar size', 'author-bio-box' ),
 				'default'     => 70,
 				'type'        => 'number',
+				/* translators: %s: gravatar.com link */
 				'description' => sprintf( __( 'Set the Gravatar size (only integers). To configure the profile picture of the author you need to register in %s.', 'author-bio-box' ), '<a href="gravatar.com">gravatar.com</a>' ),
 				'section'     => 'design',
 				'menu'        => 'authorbiobox_settings'
