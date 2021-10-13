@@ -1,10 +1,9 @@
 === Author Bio Box ===
 Contributors: claudiosanches
-Donate link: https://claudiosanches.com/doacoes/
 Tags: author, bio, social
 Requires at least: 3.8
-Tested up to: 4.9
-Stable tag: 3.3.1
+Tested up to: 5.8
+Stable tag: 3.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,6 +51,10 @@ Use this function:
 3. Plugin in action.
 
 == Changelog ==
+
+= 3.3.2 - 2017/11/01 =
+
+* Escape and sanitize all options. Security fix.
 
 = 3.3.1 - 2017/11/01 =
 
