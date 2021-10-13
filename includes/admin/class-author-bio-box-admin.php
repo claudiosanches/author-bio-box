@@ -208,7 +208,7 @@ class Author_Bio_Box_Admin {
 				case 'section':
 					add_settings_section(
 						$key,
-						$value['title'],
+						esc_html( $value['title'] ),
 						'__return_false',
 						$value['menu']
 					);
@@ -216,7 +216,7 @@ class Author_Bio_Box_Admin {
 				case 'number':
 					add_settings_field(
 						$key,
-						$value['title'],
+						esc_html( $value['title'] ),
 						array( $this, 'number_element_callback' ),
 						$value['menu'],
 						$value['section'],
@@ -231,7 +231,7 @@ class Author_Bio_Box_Admin {
 				case 'select':
 					add_settings_field(
 						$key,
-						$value['title'],
+						esc_html( $value['title'] ),
 						array( $this, 'select_element_callback' ),
 						$value['menu'],
 						$value['section'],
@@ -246,7 +246,7 @@ class Author_Bio_Box_Admin {
 				case 'color':
 					add_settings_field(
 						$key,
-						$value['title'],
+						esc_html( $value['title'] ),
 						array( $this, 'color_element_callback' ),
 						$value['menu'],
 						$value['section'],
@@ -288,11 +288,11 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '';
 		}
 
-		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="%4$s" />', $id, $menu, (int) $current, $class );
+		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="%4$s" />', esc_attr( $id ), esc_attr( $menu ), (int) $current, esc_attr( $class ) );
 
 		// Displays option description.
 		if ( isset( $args['description'] ) ) {
-			$html .= sprintf( '<p class="description">%s</p>', $args['description'] );
+			$html .= sprintf( '<p class="description">%s</p>', wp_kses_post( $args['description'] ) );
 		}
 
 		echo $html;
@@ -318,17 +318,17 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '';
 		}
 
-		$html = sprintf( '<select id="%1$s" name="%2$s[%1$s]">', $id, $menu );
+		$html = sprintf( '<select id="%1$s" name="%2$s[%1$s]">', esc_attr( $id ), esc_attr( $menu ) );
 		foreach( $args['options'] as $key => $label ) {
 			$key = sanitize_title( $key );
 
-			$html .= sprintf( '<option value="%s"%s>%s</option>', $key, selected( $current, $key, false ), $label );
+			$html .= sprintf( '<option value="%s"%s>%s</option>', esc_attr( $key ), selected( $current, $key, false ), esc_attr( $label ) );
 		}
 		$html .= '</select>';
 
 		// Displays the description.
 		if ( $args['description'] ) {
-			$html .= sprintf( '<p class="description">%s</p>', $args['description'] );
+			$html .= sprintf( '<p class="description">%s</p>', wp_kses_post( $args['description'] ) );
 		}
 
 		echo $html;
@@ -353,11 +353,11 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '#333333';
 		}
 
-		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="author-bio-box-color-field" />', $id, $menu, sanitize_hex_color( $current ) );
+		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="author-bio-box-color-field" />', esc_attr( $id ), esc_attr( $menu ), sanitize_hex_color( $current ) );
 
 		// Displays option description.
 		if ( isset( $args['description'] ) ) {
-			$html .= sprintf( '<p class="description">%s</p>', $args['description'] );
+			$html .= sprintf( '<p class="description">%s</p>', wp_kses_post( $args['description'] ) );
 		}
 
 		echo $html;
