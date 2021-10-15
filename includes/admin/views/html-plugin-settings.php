@@ -1,7 +1,11 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+/**
+ * Settings page HTML.
+ *
+ * @package ClaudioSanches/AuthorBioBox
+ */
+
+defined( 'ABSPATH' ) || exit;
 ?>
 
 <div class="wrap">

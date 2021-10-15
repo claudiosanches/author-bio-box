@@ -1,6 +1,12 @@
 <?php
+/**
+ * Admin class.
+ *
+ * @package ClaudioSanches/AuthorBioBox
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
 /**
@@ -41,12 +47,12 @@ class Author_Bio_Box_Admin {
 	protected function default_settings() {
 
 		$settings = array(
-			'settings' => array(
+			'settings'         => array(
 				'title' => __( 'Settings', 'author-bio-box' ),
 				'type'  => 'section',
-				'menu'  => 'authorbiobox_settings'
+				'menu'  => 'authorbiobox_settings',
 			),
-			'display' => array(
+			'display'          => array(
 				'title'       => __( 'Display in', 'author-bio-box' ),
 				'default'     => 'posts',
 				'type'        => 'select',
@@ -58,52 +64,52 @@ class Author_Bio_Box_Admin {
 					'posts'      => __( 'Only in Posts', 'author-bio-box' ),
 					'home_posts' => __( 'Homepage and Posts', 'author-bio-box' ),
 					'none'       => __( 'None', 'author-bio-box' ),
-				)
+				),
 			),
-			'design' => array(
+			'design'           => array(
 				'title' => __( 'Design', 'author-bio-box' ),
 				'type'  => 'section',
-				'menu'  => 'authorbiobox_settings'
+				'menu'  => 'authorbiobox_settings',
 			),
-			'gravatar' => array(
+			'gravatar'         => array(
 				'title'       => __( 'Gravatar size', 'author-bio-box' ),
 				'default'     => 70,
 				'type'        => 'number',
 				/* translators: %s: gravatar.com link */
 				'description' => sprintf( __( 'Set the Gravatar size (only integers). To configure the profile picture of the author you need to register in %s.', 'author-bio-box' ), '<a href="gravatar.com">gravatar.com</a>' ),
 				'section'     => 'design',
-				'menu'        => 'authorbiobox_settings'
+				'menu'        => 'authorbiobox_settings',
 			),
 			'background_color' => array(
 				'title'   => __( 'Background color', 'author-bio-box' ),
 				'default' => '#f8f8f8',
 				'type'    => 'color',
 				'section' => 'design',
-				'menu'    => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings',
 			),
-			'text_color' => array(
+			'text_color'       => array(
 				'title'   => __( 'Text color', 'author-bio-box' ),
 				'default' => '#333333',
 				'type'    => 'color',
 				'section' => 'design',
-				'menu'    => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings',
 			),
-			'title_color' => array(
+			'title_color'      => array(
 				'title'   => __( 'Title color', 'author-bio-box' ),
 				'default' => '#555555',
 				'type'    => 'color',
 				'section' => 'design',
-				'menu'    => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings',
 			),
-			'border_size' => array(
+			'border_size'      => array(
 				'title'       => __( 'Border size', 'author-bio-box' ),
 				'default'     => 2,
 				'type'        => 'number',
 				'section'     => 'design',
 				'description' => __( 'Thickness of the top and bottom edge of the box (only integers).', 'author-bio-box' ),
-				'menu'        => 'authorbiobox_settings'
+				'menu'        => 'authorbiobox_settings',
 			),
-			'border_style' => array(
+			'border_style'     => array(
 				'title'   => __( 'Border style', 'author-bio-box' ),
 				'default' => 'solid',
 				'type'    => 'select',
@@ -113,15 +119,15 @@ class Author_Bio_Box_Admin {
 					'none'   => __( 'None', 'author-bio-box' ),
 					'solid'  => __( 'Solid', 'author-bio-box' ),
 					'dotted' => __( 'Dotted', 'author-bio-box' ),
-					'dashed' => __( 'Dashed', 'author-bio-box' )
-				)
+					'dashed' => __( 'Dashed', 'author-bio-box' ),
+				),
 			),
-			'border_color' => array(
+			'border_color'     => array(
 				'title'   => __( 'Border color', 'author-bio-box' ),
 				'default' => '#cccccc',
 				'type'    => 'color',
 				'section' => 'design',
-				'menu'    => 'authorbiobox_settings'
+				'menu'    => 'authorbiobox_settings',
 			),
 		);
 
@@ -169,7 +175,7 @@ class Author_Bio_Box_Admin {
 
 		$screen = get_current_screen();
 
-		if ( $this->plugin_screen_hook_suffix == $screen->id ) {
+		if ( $this->plugin_screen_hook_suffix === $screen->id ) {
 			$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
 			wp_enqueue_script( 'wp-color-picker' );
@@ -224,7 +230,7 @@ class Author_Bio_Box_Admin {
 							'menu'        => $value['menu'],
 							'id'          => $key,
 							'class'       => 'small-text',
-							'description' => isset( $value['description'] ) ? $value['description'] : ''
+							'description' => isset( $value['description'] ) ? $value['description'] : '',
 						)
 					);
 					break;
@@ -239,7 +245,7 @@ class Author_Bio_Box_Admin {
 							'menu'        => $value['menu'],
 							'id'          => $key,
 							'description' => isset( $value['description'] ) ? $value['description'] : '',
-							'options'     => $value['options']
+							'options'     => $value['options'],
 						)
 					);
 					break;
@@ -253,7 +259,7 @@ class Author_Bio_Box_Admin {
 						array(
 							'menu'        => $value['menu'],
 							'id'          => $key,
-							'description' => isset( $value['description'] ) ? $value['description'] : ''
+							'description' => isset( $value['description'] ) ? $value['description'] : '',
 						)
 					);
 					break;
@@ -261,7 +267,6 @@ class Author_Bio_Box_Admin {
 				default:
 					break;
 			}
-
 		}
 
 		// Register settings.
@@ -271,9 +276,7 @@ class Author_Bio_Box_Admin {
 	/**
 	 * Number element fallback.
 	 *
-	 * @param  array $args Field arguments.
-	 *
-	 * @return string      Number field.
+	 * @param array $args Field arguments.
 	 */
 	public function number_element_callback( $args ) {
 		$menu  = $args['menu'];
@@ -288,22 +291,13 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '';
 		}
 
-		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="%4$s" />', esc_attr( $id ), esc_attr( $menu ), (int) $current, esc_attr( $class ) );
-
-		// Displays option description.
-		if ( isset( $args['description'] ) ) {
-			$html .= sprintf( '<p class="description">%s</p>', wp_kses_post( $args['description'] ) );
-		}
-
-		echo $html;
+		include __DIR__ . '/views/html-number-input.php';
 	}
 
 	/**
 	 * Select field fallback.
 	 *
-	 * @param  array $args Field arguments.
-	 *
-	 * @return string      Select field.
+	 * @param array $args Field arguments.
 	 */
 	public function select_element_callback( $args ) {
 		$menu = $args['menu'];
@@ -318,28 +312,13 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '';
 		}
 
-		$html = sprintf( '<select id="%1$s" name="%2$s[%1$s]">', esc_attr( $id ), esc_attr( $menu ) );
-		foreach( $args['options'] as $key => $label ) {
-			$key = sanitize_title( $key );
-
-			$html .= sprintf( '<option value="%s"%s>%s</option>', esc_attr( $key ), selected( $current, $key, false ), esc_attr( $label ) );
-		}
-		$html .= '</select>';
-
-		// Displays the description.
-		if ( $args['description'] ) {
-			$html .= sprintf( '<p class="description">%s</p>', wp_kses_post( $args['description'] ) );
-		}
-
-		echo $html;
+		include __DIR__ . '/views/html-select-input.php';
 	}
 
 	/**
 	 * Color element fallback.
 	 *
-	 * @param  array $args Field arguments.
-	 *
-	 * @return string      Color field.
+	 * @param array $args Field arguments.
 	 */
 	public function color_element_callback( $args ) {
 		$menu = $args['menu'];
@@ -353,14 +332,7 @@ class Author_Bio_Box_Admin {
 			$current = isset( $args['default'] ) ? $args['default'] : '#333333';
 		}
 
-		$html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="author-bio-box-color-field" />', esc_attr( $id ), esc_attr( $menu ), sanitize_hex_color( $current ) );
-
-		// Displays option description.
-		if ( isset( $args['description'] ) ) {
-			$html .= sprintf( '<p class="description">%s</p>', wp_kses_post( $args['description'] ) );
-		}
-
-		echo $html;
+		include __DIR__ . '/views/html-color-input.php';
 	}
 
 	/**

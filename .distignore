@@ -2,3 +2,5 @@
 Gruntfile.js
 package-lock.json
 package.json
+vendor/
+composer.*

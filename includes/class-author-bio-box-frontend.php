@@ -1,7 +1,11 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+/**
+ * Front-end class.
+ *
+ * @package ClaudioSanches/AuthorBioBox
+ */
+
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Author Bio Box Frontend class.
@@ -38,9 +42,9 @@ class Author_Bio_Box_Frontend {
 	protected function is_display( $settings ) {
 		$display = false;
 
-		if ( 'posts' == $settings['display'] ) {
+		if ( 'posts' === $settings['display'] ) {
 			$display = is_single();
-		} else if ( 'home_posts' == $settings['display'] ) {
+		} elseif ( 'home_posts' === $settings['display'] ) {
 			$display = is_single() || is_home();
 		}
 
@@ -67,20 +71,23 @@ class Author_Bio_Box_Frontend {
 		$border_size = (int) $settings['border_size'];
 		$border_size = 0 < $border_size ? $border_size : 2;
 
-		// Set the social icons
-		$social = apply_filters( 'authorbiobox_social_data', array(
-			'website'    => get_the_author_meta( 'user_url' ),
-			'facebook'   => get_the_author_meta( 'facebook' ),
-			'twitter'    => get_the_author_meta( 'twitter' ),
-			'googleplus' => get_the_author_meta( 'googleplus' ),
-			'linkedin'   => get_the_author_meta( 'linkedin' ),
-			'flickr'	 => get_the_author_meta( 'flickr' ),
-			'tumblr'	 => get_the_author_meta( 'tumblr' ),
-			'vimeo'		 => get_the_author_meta( 'vimeo' ),
-			'youtube'	 => get_the_author_meta( 'youtube' ),
-			'instagram'	 => get_the_author_meta( 'instagram' ),
-			'pinterest'	 => get_the_author_meta( 'pinterest' )
-		) );
+		// Set the social icons.
+		$social = apply_filters(
+			'authorbiobox_social_data',
+			array(
+				'website'    => get_the_author_meta( 'user_url' ),
+				'facebook'   => get_the_author_meta( 'facebook' ),
+				'twitter'    => get_the_author_meta( 'twitter' ),
+				'googleplus' => get_the_author_meta( 'googleplus' ),
+				'linkedin'   => get_the_author_meta( 'linkedin' ),
+				'flickr'     => get_the_author_meta( 'flickr' ),
+				'tumblr'     => get_the_author_meta( 'tumblr' ),
+				'vimeo'      => get_the_author_meta( 'vimeo' ),
+				'youtube'    => get_the_author_meta( 'youtube' ),
+				'instagram'  => get_the_author_meta( 'instagram' ),
+				'pinterest'  => get_the_author_meta( 'pinterest' ),
+			)
+		);
 
 		// Set the styes.
 		$styles = sprintf(
@@ -92,9 +99,9 @@ class Author_Bio_Box_Frontend {
 			$settings['text_color']
 		);
 
-		$html = '<div id="author-bio-box" style="' . esc_attr( $styles ) . '">';
-		$html .= '<h3><a style="color: ' . esc_attr( $settings['title_color'] ) . ';" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( __( 'All posts by', 'author-bio-box' ) . ' ' . get_the_author() ) .'" rel="author">' . esc_html( get_the_author() ) . '</a></h3>';
-		$html .= '<div class="bio-gravatar">' . get_avatar( get_the_author_meta('ID'), (int) $gravatar_size ) . '</div>';
+		$html  = '<div id="author-bio-box" style="' . esc_attr( $styles ) . '">';
+		$html .= '<h3><a style="color: ' . esc_attr( $settings['title_color'] ) . ';" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( __( 'All posts by', 'author-bio-box' ) . ' ' . get_the_author() ) . '" rel="author">' . esc_html( get_the_author() ) . '</a></h3>';
+		$html .= '<div class="bio-gravatar">' . get_avatar( get_the_author_meta( 'ID' ), (int) $gravatar_size ) . '</div>';
 
 		foreach ( $social as $key => $value ) {
 			if ( ! empty( $value ) ) {

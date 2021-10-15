@@ -1,7 +1,11 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+/**
+ * Functions.
+ *
+ * @package ClaudioSanches/AuthorBioBox
+ */
+
+defined( 'ABSPATH' ) || exit;
 
 /**
  * Shows the Author Bio Box.
@@ -14,9 +18,7 @@ function get_author_bio_box() {
 
 /**
  * Shows the Author Bio Box legacy.
- *
- * @return string Author Bio Box HTML.
  */
 function authorbbio_add_authorbox() {
-	echo get_author_bio_box();
+	echo wp_kses_post( get_author_bio_box() );
 }
