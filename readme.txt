@@ -1,9 +1,9 @@
 === Author Bio Box ===
 Contributors: claudiosanches
 Tags: author, bio, social
-Requires at least: 3.8
+Requires at least: 4.6
 Tested up to: 5.8
-Stable tag: 3.3.3
+Stable tag: 3.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,6 +51,10 @@ Use this function:
 3. Plugin in action.
 
 == Changelog ==
+
+= 3.4.0 - 2021/10/15 =
+
+* Refactored plugin files.
 
 = 3.3.3 - 2021/10/13 =
 
