@@ -13,6 +13,13 @@ defined( 'ABSPATH' ) || exit;
 class Author_Bio_Box_Frontend {
 
 	/**
+	 * Displayed.
+	 *
+	 * @var bool
+	 */
+	private $displayed = false;
+
+	/**
 	 * Initialize the frontend actions.
 	 */
 	public function __construct() {
@@ -123,10 +130,15 @@ class Author_Bio_Box_Frontend {
 	 * @return string          WP the content with Author Bio Box.
 	 */
 	public function display( $content ) {
+		if ( $this->displayed ) {
+			return $content;
+		}
+
 		// Get the settings.
 		$settings = get_option( 'authorbiobox_settings' );
 
 		if ( $this->is_display( $settings ) ) {
+			$this->displayed = true;
 			return $content . self::view( $settings );
 		}
 
