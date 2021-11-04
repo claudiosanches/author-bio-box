@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the Author Bio Box plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Author Bio Box 3.3.3\n"
+"Project-Id-Version: Author Bio Box 3.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/author-bio-box\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-10-13T17:15:46-03:00\n"
+"POT-Creation-Date: 2021-11-04T19:39:26-03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: author-bio-box\n"
 
 #. Plugin Name of the plugin
-#: includes/admin/class-author-bio-box-admin.php:189
-#: includes/admin/class-author-bio-box-admin.php:190
+#: includes/admin/class-author-bio-box-admin.php:195
+#: includes/admin/class-author-bio-box-admin.php:196
 msgid "Author Bio Box"
 msgstr ""
 
@@ -36,125 +36,125 @@ msgstr ""
 msgid "http://claudiosanches.com/"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:45
+#: includes/admin/class-author-bio-box-admin.php:51
 msgid "Settings"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:50
+#: includes/admin/class-author-bio-box-admin.php:56
 msgid "Display in"
 msgstr ""
 
 #. translators: %s: function example
-#: includes/admin/class-author-bio-box-admin.php:54
+#: includes/admin/class-author-bio-box-admin.php:60
 msgid "You can display the box directly into your theme using: %s"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:58
+#: includes/admin/class-author-bio-box-admin.php:64
 msgid "Only in Posts"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:59
+#: includes/admin/class-author-bio-box-admin.php:65
 msgid "Homepage and Posts"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:60
-#: includes/admin/class-author-bio-box-admin.php:113
+#: includes/admin/class-author-bio-box-admin.php:66
+#: includes/admin/class-author-bio-box-admin.php:119
 msgid "None"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:64
+#: includes/admin/class-author-bio-box-admin.php:70
 msgid "Design"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:69
+#: includes/admin/class-author-bio-box-admin.php:75
 msgid "Gravatar size"
 msgstr ""
 
 #. translators: %s: gravatar.com link
-#: includes/admin/class-author-bio-box-admin.php:73
+#: includes/admin/class-author-bio-box-admin.php:79
 msgid "Set the Gravatar size (only integers). To configure the profile picture of the author you need to register in %s."
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:78
+#: includes/admin/class-author-bio-box-admin.php:84
 msgid "Background color"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:85
+#: includes/admin/class-author-bio-box-admin.php:91
 msgid "Text color"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:92
+#: includes/admin/class-author-bio-box-admin.php:98
 msgid "Title color"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:99
+#: includes/admin/class-author-bio-box-admin.php:105
 msgid "Border size"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:103
+#: includes/admin/class-author-bio-box-admin.php:109
 msgid "Thickness of the top and bottom edge of the box (only integers)."
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:107
+#: includes/admin/class-author-bio-box-admin.php:113
 msgid "Border style"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:114
+#: includes/admin/class-author-bio-box-admin.php:120
 msgid "Solid"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:115
+#: includes/admin/class-author-bio-box-admin.php:121
 msgid "Dotted"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:116
+#: includes/admin/class-author-bio-box-admin.php:122
 msgid "Dashed"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:120
+#: includes/admin/class-author-bio-box-admin.php:126
 msgid "Border color"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:140
+#: includes/admin/class-author-bio-box-admin.php:146
 msgid "Facebook"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:141
+#: includes/admin/class-author-bio-box-admin.php:147
 msgid "Twitter"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:142
+#: includes/admin/class-author-bio-box-admin.php:148
 msgid "Google Plus"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:143
+#: includes/admin/class-author-bio-box-admin.php:149
 msgid "LinkedIn"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:144
+#: includes/admin/class-author-bio-box-admin.php:150
 msgid "Flickr"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:145
+#: includes/admin/class-author-bio-box-admin.php:151
 msgid "Tumblr"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:146
+#: includes/admin/class-author-bio-box-admin.php:152
 msgid "Vimeo"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:147
+#: includes/admin/class-author-bio-box-admin.php:153
 msgid "YouTube"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:148
+#: includes/admin/class-author-bio-box-admin.php:154
 msgid "Instagram"
 msgstr ""
 
-#: includes/admin/class-author-bio-box-admin.php:149
+#: includes/admin/class-author-bio-box-admin.php:155
 msgid "Pinterest"
 msgstr ""
 
-#: includes/class-author-bio-box-frontend.php:96
+#: includes/class-author-bio-box-frontend.php:110
 msgid "All posts by"
 msgstr ""

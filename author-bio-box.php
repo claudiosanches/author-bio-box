@@ -3,7 +3,7 @@
  * Plugin Name: Author Bio Box
  * Plugin URI: https://github.com/claudiosanches/author-bio-box
  * Description: Display a box with the author's biography and also social icons in bottom of the post.
- * Version: 3.4.0
+ * Version: 3.4.1
  * Author: claudiosanches
  * Author URI: http://claudiosanches.com/
  * Text Domain: author-bio-box
