@@ -155,6 +155,18 @@ msgstr ""
 msgid "Pinterest"
 msgstr ""
 
+#: includes/admin/class-author-bio-box-admin.php:156
+msgid "Mastodon"
+msgstr ""
+
+#: includes/admin/class-author-bio-box-admin.php:157
+msgid "Pixelfed"
+msgstr ""
+
+#: includes/admin/class-author-bio-box-admin.php:158
+msgid "PeerTube"
+msgstr ""
+
 #: includes/class-author-bio-box-frontend.php:110
 msgid "All posts by"
 msgstr ""

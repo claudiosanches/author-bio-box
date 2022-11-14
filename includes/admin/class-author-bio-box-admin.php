@@ -27,7 +27,7 @@ class Author_Bio_Box_Admin {
 	public function __construct() {
 
 		// Custom contact methods.
-		add_filter( 'user_contactmethods', array( $this, 'contact_methods' ), 10, 1 );
+		add_filter( 'user_contactmethods', array( $this, 'contact_methods' ), 13, 1 );
 
 		// Load admin JavaScript.
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
@@ -143,6 +143,7 @@ class Author_Bio_Box_Admin {
 	 */
 	public function contact_methods( $methods ) {
 		// Add new methods.
+		$methods['twitter']    = __( 'Twitter', 'author-bio-box' );
 		$methods['facebook']   = __( 'Facebook', 'author-bio-box' );
 		$methods['twitter']    = __( 'Twitter', 'author-bio-box' );
 		$methods['googleplus'] = __( 'Google Plus', 'author-bio-box' );
@@ -153,11 +154,15 @@ class Author_Bio_Box_Admin {
 		$methods['youtube']    = __( 'YouTube', 'author-bio-box' );
 		$methods['instagram']  = __( 'Instagram', 'author-bio-box' );
 		$methods['pinterest']  = __( 'Pinterest', 'author-bio-box' );
+		$methods['mastodon']   = __( 'Mastodon', 'author-bio-box' );
+		$methods['pixelfed']   = __( 'Pixelfed', 'author-bio-box' );
+		$methods['peertube']   = __( 'PeerTube', 'author-bio-box' );
 
 		// Remove old methods.
 		unset( $methods['aim'] );
 		unset( $methods['yim'] );
 		unset( $methods['jabber'] );
+		//unset( $methods['googleplus'] );
 
 		return $methods;
 	}

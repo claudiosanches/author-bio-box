@@ -93,6 +93,9 @@ class Author_Bio_Box_Frontend {
 				'youtube'    => get_the_author_meta( 'youtube' ),
 				'instagram'  => get_the_author_meta( 'instagram' ),
 				'pinterest'  => get_the_author_meta( 'pinterest' ),
+				'mastodon'   => get_the_author_meta( 'mastodon' ),
+				'pixelfed'   => get_the_author_meta( 'pixelfed' ),
+				'peertube'   => get_the_author_meta( 'peertube' ),
 			)
 		);
 
