@@ -52,6 +52,11 @@ Use this function:
 
 == Changelog ==
 
+= 3.4.2 - 2022/11/00 =
+
+* Added Mastodon, Pixelfed, and PeerTube.
+* Added 32px, 64px and 128px icon PNGs.
+
 = 3.4.1 - 2021/11/04 =
 
 * Prevent duplicated element.

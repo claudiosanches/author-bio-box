@@ -156,8 +156,8 @@ msgstr "Cor da borda"
 
 # @ author-bio-box
 #: includes/admin/class-author-bio-box-admin.php:146
-msgid "Facebook"
-msgstr "Facebook"
+msgid "Google Plus"
+msgstr "Google Plus"
 
 # @ author-bio-box
 #: includes/admin/class-author-bio-box-admin.php:147
@@ -166,8 +166,8 @@ msgstr "Twitter"
 
 # @ author-bio-box
 #: includes/admin/class-author-bio-box-admin.php:148
-msgid "Google Plus"
-msgstr "Google Plus"
+msgid "Facebook"
+msgstr "Facebook"
 
 # @ author-bio-box
 #: includes/admin/class-author-bio-box-admin.php:149
@@ -203,6 +203,21 @@ msgstr "Instagram"
 #: includes/admin/class-author-bio-box-admin.php:155
 msgid "Pinterest"
 msgstr "Pinterest"
+
+# @ author-bio-box
+#: includes/admin/class-author-bio-box-admin.php:156
+msgid "Mastodon"
+msgstr "Mastodon"
+
+# @ author-bio-box
+#: includes/admin/class-author-bio-box-admin.php:157
+msgid "Pixelfed"
+msgstr "Pixelfed"
+
+# @ author-bio-box
+#: includes/admin/class-author-bio-box-admin.php:158
+msgid "PeerTube"
+msgstr "PeerTube"
 
 # @ author-bio-box
 #: includes/class-author-bio-box-frontend.php:110
